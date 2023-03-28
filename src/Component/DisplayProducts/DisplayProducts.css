@@ -1,0 +1,38 @@
+.Display-container {
+  border: 2px solid #b07676;
+  border-radius: 10px;
+  position: relative;
+  margin: 30px;
+}
+
+.product-description {
+  padding: 10px;
+  padding-bottom: 60px;
+}
+
+.Display-container img {
+  width: 100%;
+  height: 250px;
+}
+
+.Display-container h3 {
+  padding: 20px 0;
+}
+
+.Display-container button {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border: none;
+  padding: 10px 0;
+  cursor: pointer;
+  background-color: rgb(8, 182, 124);
+  color: aliceblue;
+  font-weight: 800;
+  border-top: 2px solid #b07676;
+}
+.Display-container button:hover {
+  background-color: rgb(25, 92, 92);
+}

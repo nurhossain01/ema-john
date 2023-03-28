@@ -1,0 +1,14 @@
+.header {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+}
+.nav-list a{
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 15px;
+}
