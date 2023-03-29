@@ -1,0 +1,32 @@
+
+.cart-information h6{
+  padding-top: 20px;
+  font-size: 15px;
+}
+.cart-information h4{
+  padding: 20px 0;
+  font-size: 15px;
+}
+.cart-information button{
+  display: block;
+  padding: 10px;
+  width: 100%;
+  font-size: 15px;
+  color: aliceblue;
+  border: none;
+  border-radius: 5px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.clear-cart{
+  background-color: rgb(202, 20, 20);
+}
+.clear-cart:hover{
+  background-color: rgb(95, 7, 7);
+}
+.review-order{
+  background-color: rgb(107, 89, 16);
+}
+.review-order:hover{
+  background-color: rgb(50, 41, 4);
+}
