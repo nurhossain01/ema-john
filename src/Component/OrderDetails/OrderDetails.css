@@ -1,0 +1,33 @@
+.order-container-layout{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid;
+  margin: 10px 0;
+}
+.order-product{
+  display: flex;
+  margin: 4px 0;
+  align-items: center;
+}
+.order-product img{
+  width: 100px;
+}
+.info{
+  padding-left: 10px;
+}
+.info h4{
+  padding-bottom: 10px;
+}
+.price-info{
+  color: rgb(228, 145, 36);
+}
+.trash-icon{
+  font-size: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: blanchedalmond;
+  color: rgb(172, 98, 8);
+}
