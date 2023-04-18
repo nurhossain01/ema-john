@@ -7,6 +7,9 @@ import OrderReview from "../Component/OrderReview/OrderReview.jsx";
 import Inventory from "../Component/Inventory/Inventory.jsx";
 import Login from "../Component/Login/Login"
 import productAndCartData from "../productAndCartData/productAndCartData.js";
+import CheckOut from "../Component/Home/CheckOut/CheckOut.jsx";
+import SignUp from "../Component/SignUp/SignUp.jsx";
+import RequireAuth from "../RequireAuth/RequireAuth.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -23,7 +26,7 @@ export const router = createBrowserRouter([
       },
       {
         path: '/shop',
-        element: <Shop></Shop>,
+        element: <RequireAuth><Shop></Shop></RequireAuth>,
         loader: productAndCartData
       },
       {
@@ -46,6 +49,14 @@ export const router = createBrowserRouter([
       {
         path: '/login',
         element: <Login></Login>,
+      },
+      {
+        path: '/register',
+        element: <SignUp></SignUp>,
+      },
+      {
+        path: '/checkOut',
+        element: <RequireAuth><CheckOut></CheckOut></RequireAuth>
       }
     ]
   }

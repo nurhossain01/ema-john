@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { addToDb, getShoppingCart } from '../../utilities/fakedb';
+import { addToDb, clearAllShoppingCart, getShoppingCart } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import DisplayProducts from '../DisplayProducts/DisplayProducts';
 import './Shop.css';
+import { Link } from 'react-router-dom';
 
 const Shop = () => {
   const [products, setProducts] = useState([])
@@ -11,14 +12,14 @@ const Shop = () => {
   const handleAddToCart = (product) => {
     let newCart = [];
     const exist = cart.find(pd => pd.id === product.id);
-    if(!exist){
+    if (!exist) {
       product.quantity = 1;
-      newCart=[...cart, product]
+      newCart = [...cart, product]
     }
-    else{
+    else {
       exist.quantity = exist.quantity + 1;
       const remaining = cart.filter(pd => pd.id !== product.id);
-      newCart=[...remaining, exist]
+      newCart = [...remaining, exist]
     }
     setCart(newCart)
     addToDb(product.id)
@@ -41,7 +42,7 @@ const Shop = () => {
       const savedProducts = products.find(product => product.id === id);
       // get quantity of the product
       const quantity = storedCart[id];
-      if(savedProducts){
+      if (savedProducts) {
         savedProducts.quantity = quantity;
         savedCart.push(savedProducts)
       }
@@ -67,7 +68,11 @@ const Shop = () => {
         }
       </div>
       <div className="cart-container">
-        <Cart cart={cart} handleClear={handleClear}></Cart>
+        <Cart cart={cart} handleClear={handleClear}>
+          <Link to='/order'>
+            <button className='review-order'>Review Order</button>
+          </Link>
+        </Cart>
       </div>
     </div>
   );
