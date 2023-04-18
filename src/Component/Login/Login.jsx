@@ -8,6 +8,7 @@ const Login = () => {
   const { user, userLogin } = useContext(AuthContext);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [show, setShow] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const from = location.state?.from?.pathname || "/";
@@ -51,7 +52,14 @@ const Login = () => {
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" name='password' placeholder="password" className="input" />
+          <input type={show ? "text" : "password"} name='password' placeholder="password" className="input" />
+        </div>
+        <div>
+          <p onClick={() => setShow(!show)}>
+            {
+              show ? <span>Hide password</span>: <span>Show password</span>
+            } 
+          </p>
         </div>
         <div className='text-error'>
           <span className='error'>{error}</span>
